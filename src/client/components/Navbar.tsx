@@ -11,7 +11,7 @@ function Navbar({}: Props) {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/bugs">Bugs</Link>
+          <Link to="/defects">Defects</Link>
         </li>
         <li>
           <Link to="/projects">Projects</Link>

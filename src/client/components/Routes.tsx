@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Bug from "./Bug";
+import Defects from "./Defect";
 import Home from "./Home";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
+import SingleProject from "./SingleProject";
+import SingleDefect from "./SingleDefect";
 
 export interface Props {}
 
@@ -13,13 +15,13 @@ const Router: React.FunctionComponent<Props> = (props) => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bugs">
-          <Route index element={<Bug />} />
-          <Route path=":id" element={<Bug />} />
+        <Route path="/defects">
+          <Route index element={<Defects />} />
+          <Route path=":id" element={<SingleDefect />} />
         </Route>
         <Route path="/projects">
           <Route index element={<Projects />} />
-          <Route path=":id" element={<Projects />} />
+          <Route path=":id" element={<SingleProject />} />
         </Route>
       </Routes>
     </BrowserRouter>
